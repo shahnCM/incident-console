@@ -1,4 +1,5 @@
 # Incident Console — Day 1 Companion
+
 ### Setup, corpus, and the ledger
 
 This is your working copy of Day 1 — pulled out of the master plan so you don't have to scroll a
@@ -13,8 +14,10 @@ part is yours; this is just the scaffolding.
 Copy each block below into `notes/<tool>.md` once you've filled it in.
 
 ### Vite — Getting Started
+
 Read: **Getting Started**, skim **Features**, read **Dependency Pre-Bundling**
 Link: https://vite.dev/guide/
+
 ```
 ## <page title> — <url> — 2026-07-26
 - claim / API:
@@ -23,10 +26,12 @@ Link: https://vite.dev/guide/
 ```
 
 ### React — Installation
+
 Read: **Installation**, and **Build a React App from Scratch**
 (the master plan calls the second one "Start a New React Project" — react.dev restructured that
 page; this is its current name/URL)
 Links: https://react.dev/learn/installation · https://react.dev/learn/build-a-react-app-from-scratch
+
 ```
 ## <page title> — <url> — 2026-07-26
 - claim / API:
@@ -35,8 +40,10 @@ Links: https://react.dev/learn/installation · https://react.dev/learn/build-a-r
 ```
 
 ### TypeScript Handbook — The Basics + Everyday Types
+
 Links: https://www.typescriptlang.org/docs/handbook/2/basic-types.html
 · https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
+
 ```
 ## <page title> — <url> — 2026-07-26
 - claim / API:
@@ -48,9 +55,9 @@ Links: https://www.typescriptlang.org/docs/handbook/2/basic-types.html
 
 ## 2. Escalate
 
-- [ ] `docs-corpus/` populated (see Step 13 in chat) — confirmed-live bundles: Vite, Vitest, Zod,
+- [x] `docs-corpus/` populated (see Step 13 in chat) — confirmed-live bundles: Vite, Vitest, Zod,
       Next.js, Hono (llms-full.txt) + shadcn/ui, react.dev, TanStack (llms.txt index only).
-- [ ] Read the **Vite 8.0 announcement** — https://vite.dev/blog/announcing-vite8 — and skim the
+- [x] Read the **Vite 8.0 announcement** — https://vite.dev/blog/announcing-vite8 — and skim the
       **CHANGELOG** — https://github.com/vitejs/vite/blob/main/packages/vite/CHANGELOG.md — for
       what esbuild → Oxc changed under the hood.
 
@@ -58,18 +65,18 @@ Links: https://www.typescriptlang.org/docs/handbook/2/basic-types.html
 
 ## 3. Build checklist
 
-- [ ] Project folder created under your workstation's `/projects` mount
-- [ ] Vite 8 + React 19.2 + TS 6.0 scaffolded (`react-ts` template)
-- [ ] Dev server reachable from the host browser (`--host`, port in `WS_PORTS_C`)
-- [ ] `tsconfig.app.json`: `strict`, `exactOptionalPropertyTypes`, `noUncheckedIndexedAccess`,
+- [x] Project folder created under your workstation's `/projects` mount
+- [x] Vite 8 + React 19.2 + TS 6.0 scaffolded (`react-ts` template)
+- [x] Dev server reachable from the host browser (`--host`, port in `WS_PORTS_C`)
+- [x] `tsconfig.app.json`: `strict`, `exactOptionalPropertyTypes`, `noUncheckedIndexedAccess`,
       `noImplicitOverride`
-- [ ] ESLint (flat config) + `typescript-eslint` + Prettier wired — **not** the Oxlint the
+- [x] ESLint (flat config) + `typescript-eslint` + Prettier wired — **not** the Oxlint the
       scaffold ships by default (see chat Step 3)
-- [ ] Husky + lint-staged: `.husky/pre-commit` runs `lint-staged`; `@typescript-eslint/no-explicit-any`
+- [x] Husky + lint-staged: `.husky/pre-commit` runs `lint-staged`; `@typescript-eslint/no-explicit-any`
       is `"error"`
-- [ ] `db.json` with 200 synthetic incidents (+ an `assignees` collection for Day 11)
-- [ ] `src/{app,features,shared,lib}` created
-- [ ] `docs/coverage-ledger.csv`, `notes/`, `docs/gates/`, `docs-corpus/` initialized
+- [x] `db.json` with 200 synthetic incidents (+ an `assignees` collection for Day 11)
+- [x] `src/{app,features,shared,lib}` created
+- [x] `docs/coverage-ledger.csv`, `notes/`, `docs/gates/`, `docs-corpus/` initialized
 
 ---
 
@@ -133,4 +140,5 @@ paste them back to me and I'll pressure-test them. Prompts to get you started:
 ```csv
 tool,doc_section,tier,pages,date_read,hours,gate_passed(y/n),open_question
 ```
+
 Add one row per section you actually finish today; don't backfill hours you didn't track.
