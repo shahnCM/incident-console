@@ -1,1 +1,8 @@
 tool,doc_section,tier,pages,date_read,hours,gate_passed(y/n),open_question
+vite,Getting Started,A,1,2026-07-26,,n,Baseline browser-target date pinning across Vite majors
+vite,Features (skim),A,1,2026-07-26,,n,Is npm run build the only real type-check gate in the chain
+vite,Dependency Pre-Bundling,A,1,2026-07-26,,n,Any dependency yet large/CJS enough to make pre-bundling visible
+react,Installation,A,1,2026-07-26,,n,What the scratch path gives up vs a recommended framework
+react,Build a React App from Scratch,A,1,2026-07-26,,n,Is the Day 27 RSC swap meant to demonstrate this exact gap
+typescript,The Basics,A,1,2026-07-26,,n,Confirm noUncheckedIndexedAccess etc are individually documented in TSConfig reference
+typescript,Everyday Types,A,1,2026-07-26,,n,Is erasableSyntaxOnly the actual reason the plan avoids enums
