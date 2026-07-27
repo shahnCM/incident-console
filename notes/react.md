@@ -103,3 +103,91 @@ _Goes at `notes/react.md`_
   reading it, does "minimal" mean _link-only, no prose_ specifically, rather than _short_? 249
   fully-categorized lines isn't short. Worth testing that reading against vite's file (`notes/vite.md`),
   which is much shorter but opens with several paragraphs of prose react's file never has.
+
+## Day 3 — Describing the UI (full chapter) + Render and Commit + State as a Snapshot
+
+### Your First Component — https://react.dev/learn/your-first-component
+
+- claim/API: a component is an ordinary JS function, name capitalized, that returns markup; a component must return one root element (or a Fragment wrapping several).
+- footgun: defining a component function _inside_ another component's function body creates a brand-new component type on every parent render, which resets all of that child's state. Always define components at the module's top level.
+- Q (unanswered):
+
+### Importing and Exporting Components — https://react.dev/learn/importing-and-exporting-components
+
+- claim/API: a file has at most one default export (imported under any name, no braces) but can have many named exports (imported under their exact name, in braces).
+- footgun: mixing default-export and named-export syntax inconsistently across a codebase makes it easy to import the wrong thing with the wrong syntax; pick one convention per file and stay consistent.
+- Q (unanswered):
+
+### Writing Markup with JSX — https://react.dev/learn/writing-markup-with-jsx
+
+- claim/API: JSX requires a single enclosing tag per return (use `<>...</>` for a Fragment when there's no natural wrapper); most attributes are camelCase (`className`, `onClick`), not the HTML lowercase form.
+- footgun: an unclosed self-closing tag (`<img>` instead of `<img />`) or multiple sibling root elements without a Fragment is a compile error, not a warning.
+- Q (unanswered):
+
+### JavaScript in JSX with Curly Braces — https://react.dev/learn/javascript-in-jsx-with-curly-braces
+
+- claim/API: `{}` opens a window from JSX back into JS, usable for attribute values or text content; only **expressions** are legal inside (ternaries, function calls, arithmetic), not statements.
+- footgun: you cannot put an `if` or a `for` loop directly inside `{}`; the double-brace look of `style={{ color: 'red' }}` is just a single JS object literal sitting inside one pair of JSX braces, not special syntax.
+- Q (unanswered):
+
+### Passing Props to a Component — https://react.dev/learn/passing-props-to-a-component
+
+- claim/API: props flow one direction, parent → child; destructure them in the function signature; `{...props}` spreads all of them through; a destructured default (`{ color = 'blue' }`) supplies a fallback.
+- footgun: props are read-only from the child's side — mutating an object or array received as a prop leaks that mutation back into the parent's data, since it's the same reference.
+- Q (unanswered):
+
+### Conditional Rendering — https://react.dev/learn/conditional-rendering
+
+- claim/API: `if`, ternaries, and `&&` are all valid ways to conditionally include JSX; returning `null` renders nothing.
+- footgun: `count && <Badge />` renders a literal `0` on the page when `count` is `0`, because `0` is falsy but is still a value JSX will render. Use `count > 0 && <Badge />` or a ternary instead.
+- Q (unanswered):
+
+### Rendering Lists — https://react.dev/learn/rendering-lists
+
+- claim/API: `.map()` turns an array of data into an array of elements; every element in a list needs a stable `key` prop that is not passed down as a regular prop.
+- footgun: using the array index as `key` breaks item identity across sorts, inserts, and deletes — React matches old and new trees by key, so an index key causes the wrong row's state/DOM to follow the wrong data after a reorder. Use a stable field from the data (e.g. `incident.id`).
+- Q (unanswered):
+
+### Keeping Components Pure — https://react.dev/learn/keeping-components-pure
+
+- claim/API: a component should be pure — same props/state/context in, same JSX out — and must not mutate any object or variable that existed before it was called. Strict Mode double-invokes components in development specifically to surface impurities.
+- footgun: mutating an array or object that came in as a prop (e.g. calling `.push()` on it during render) can _appear_ to work once, then breaks unpredictably under Strict Mode or when React re-renders more than expected.
+- Q (unanswered):
+
+### Your UI as a Tree — https://react.dev/learn/understanding-your-ui-as-a-tree
+
+- claim/API: a render tree models parent/child relationships between components at runtime (root/top-level vs. leaf components); a separate module dependency tree models which files import which, and is what bundlers use to build the shipped bundle.
+- footgun: conflating the render tree (runtime, "what's on screen") with the module tree (build-time, "what's imported") leads to wrong intuitions when reasoning about re-render scope vs. bundle size.
+- Q (unanswered):
+
+### Render and Commit — https://react.dev/learn/render-and-commit
+
+- claim/API: three steps put something on screen — **trigger** (initial render, or a state update on the component or an ancestor), **render** (React calls your components to figure out what should be on screen; this step does not touch the DOM), **commit** (React actually changes the DOM — every node on first mount, only the differences on updates).
+- footgun: it's easy to assume "render" means the screen visibly changes. It doesn't — DOM mutation only happens in commit, and React is free to throw away in-progress render work without ever committing it (e.g. an interrupted render).
+- Q (unanswered):
+
+### State as a Snapshot — https://react.dev/learn/state-as-a-snapshot
+
+- claim/API: a state variable read inside an event handler always holds the value from the render in which that handler was created — not "whatever it is right now." Calling the setter schedules a new render with a new snapshot; it does not mutate the existing variable in place.
+- footgun: calling `setCount(count + 1)` three times in one handler queues three renders that all read the same stale `count` from that render's snapshot, netting +1 instead of +3. The updater form, `setCount(c => c + 1)`, reads the pending value instead and gives +3. (This is the exact trap Day 4 builds a test around.)
+- Q (unanswered):
+
+---
+
+## Escalate — react.dev/blog, React 19.0 → 19.2 (render-path relevant notes)
+
+- React 19 shipped Dec 5, 2024 (Actions, `use`, `ref` as prop, stable Server Components); 19.1 shipped ~June 2025; 19.2 shipped Oct 1, 2025 — three releases in a year, no breaking changes between them, but 19.2 ships stricter ESLint rules for `useEffectEvent`.
+- 19.2 stabilized `<Activity>` (keeps a subtree mounted-but-hidden, preserving state while pausing its effects and deferring its updates) and `useEffectEvent` (stable-identity callback for reading latest props/state inside an effect without adding it to the dependency array). Both were experimental before 19.2.
+- Relevant to render/commit specifically: `<Activity mode="hidden">` changes what "commit" does for a hidden subtree — it doesn't unmount, so state and the DOM subtree survive, but effects for that subtree are torn down and its updates are deprioritized. Filed away for Day 18; not needed yet.
+- Check `github.com/facebook/react/blob/main/CHANGELOG.md` for the exact 19.0.0 → 19.2.x entries and cross-reference against the security notice (§3 of the plan) before treating any 19.0–19.2 patch below 19.0.3/19.1.4/19.2.3 as safe to run.
+- Q (unanswered):
+
+---
+
+## Gate — GQ:5 (answer cold, no peeking, at the end of Day 3)
+
+1. What are the three steps React goes through to get something on screen, and what happens in each one?
+2. Name the two things that can trigger a render.
+3. What does it mean for a component to be "pure," and what's the observable symptom when one isn't?
+4. Why does React need a `key` on list items, and what specifically breaks when the array index is used as the key on a list that gets sorted or filtered?
+5. Is the DOM touched during "render," or only during "commit"? What would you say to a teammate who claims "render updates the screen"?
