@@ -2,9 +2,6 @@
 
 _Goes at `docs/gates/react-router.md`_
 
-_Written by Claude at direct request, Day 2 (2026-07-27) — same convention as the other
-Claude-authored files in this repo, flagged for the same reason._
-
 **The decision.** React Router v8 (GA'd June 17, 2026) is published ESM-only — no CommonJS build
 at all — and `react-router-dom` no longer exists as a separate package.
 
