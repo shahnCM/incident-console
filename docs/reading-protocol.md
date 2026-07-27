@@ -2,10 +2,6 @@
 
 _Goes at `docs/reading-protocol.md`_
 
-Written by Claude at direct request on Day 2 (2026-07-27). This one's a reference document, not a
-comprehension check, so it doesn't carry the same "not derived cold" caveat a gate would — but
-it's built entirely from §4 of the master plan and today's actual work, nothing invented.
-
 ## The three-pass method
 
 Every doc page gets three passes, not one:

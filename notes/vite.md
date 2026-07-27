@@ -43,10 +43,6 @@ _Goes at `notes/vite.md`_
 
 ## Day 2 addition — 2026-07-27
 
-_Sourced from the corpus file downloaded on Day 1 (`docs-corpus/vite-llms.txt`), not re-fetched —
-it's already local and greppable. Same caveat as always: this is the "Read" pass, the "Retrieve"
-pass (close it, write the one-liner) is still yours._
-
 ## vite.dev/llms.txt (index shape) — https://vite.dev/llms.txt — 2026-07-27
 
 - claim / API: 84 lines — much shorter than react.dev's 249. Unlike react's file, this one opens

@@ -7,9 +7,6 @@ Framework/Vite, API) happens Day 8 — this file starts early because Day 2's **
 targets Router's v8 discussion and changelog specifically. Everything below is escalation-ladder
 material (rung 3: RFC/discussion, and rung 2: changelog/announcement), not the doc read itself._
 
-_Sourced from the live pages today (fetched, not memory). This is raw material for the Day 2 GD
-gate — write the gate cold from what's below, don't copy these bullets into it directly._
-
 ## React Router v8 (proposal discussion) — https://github.com/remix-run/react-router/discussions/14468 — 2026-07-27
 
 - claim / API: Opened Oct 23, 2025 by maintainer brookslybrand as a public roadmap-scoping thread

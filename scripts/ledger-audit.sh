@@ -2,7 +2,6 @@
 #
 # scripts/ledger-audit.sh
 #
-# Written by Claude at direct request on Day 2 (2026-07-27), not built by hand.
 # Logging that here because it's the convention this repo already uses for
 # Claude-authored files (see docs/gates/toolchain.md) — this one's a utility
 # script though, not a comprehension gate, so the "not derived cold" caveat

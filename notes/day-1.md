@@ -20,7 +20,7 @@ _Was "Day 1 Companion." Day 1 is closed now — this is the record, not a live t
 - [x] `docs/coverage-ledger.csv` — 7 rows logged
 - [x] All four Done-when checks — independently re-run, all passing
 
-**Reading + Gate — files exist, filled in by Claude at direct request, not cold retrieval:**
+**Reading + Gate — files exist:**
 
 - [ ] `notes/vite.md`, `notes/react.md`, `notes/typescript.md` — grounded in the actual live docs
       (fetched, not from memory), but you didn't do the reading. Worth actually reading the real

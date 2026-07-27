@@ -2,7 +2,7 @@
 
 ### Interview prep + lessons, built from today's actual work
 
-## Part 1 — Toolchain Q&A (model answers)
+## Part 1 — Toolchain Q&A
 
 **Q1. What does Rolldown actually replace, and why does that collapse two bundlers into one?**
 Vite ran two separate bundlers for years: esbuild for dev-server speed (TS/JSX transforms,

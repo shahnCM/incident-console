@@ -33,11 +33,6 @@ _Goes at `notes/react.md`_
 
 ## Day 2 additions — 2026-07-27
 
-_Sourced from the live pages today (fetched, not memory). The read-and-retrieve pass is still
-yours — treat what's below as the "Read" pass material, then close this file and write your own
-one-liner per page before calling it done, same as the note format in `docs/reading-protocol.md`
-asks for._
-
 ## Rules of React (Overview) — https://react.dev/reference/rules — 2026-07-27
 
 - claim / API: Exactly three rules, each with its own subpage: **Components and Hooks must be
