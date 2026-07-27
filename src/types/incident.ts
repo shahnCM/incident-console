@@ -1,8 +1,11 @@
 export interface Incident {
   id: string
   title: string
-  severity: 'low' | 'medium' | 'high' | 'critical'
-  status: 'open' | 'investigating' | 'resolved'
+  service: string
+  severity: 1 | 2 | 3 | 4
+  status: 'open' | 'identified' | 'investigating' | 'monitoring' | 'resolved'
+  assigneeId: string
   createdAt: string
-  assignee?: string
+  updatedAt: string
+  tags: string[]
 }
