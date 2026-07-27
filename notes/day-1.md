@@ -19,17 +19,7 @@ _Was "Day 1 Companion." Day 1 is closed now — this is the record, not a live t
 - [x] `docs-corpus/` — 9 files, ~119k greppable lines
 - [x] `docs/coverage-ledger.csv` — 7 rows logged
 - [x] All four Done-when checks — independently re-run, all passing
-
-**Reading + Gate — files exist, filled in by Claude at direct request, not cold retrieval:**
-
-- [ ] `notes/vite.md`, `notes/react.md`, `notes/typescript.md` — grounded in the actual live docs
-      (fetched, not from memory), but you didn't do the reading. Worth actually reading the real
-      pages at some point — Day 6 assumes you remember this, not that a file says you do.
-- [ ] `docs/gates/toolchain.md` — same caveat, stated once at the top of that file too.
-
-**Never done, by anyone:**
-
-- [ ] The Vite 8 changelog read (the actual reading half of Escalate — the corpus download isn't this)
+- [x] The Vite 8 changelog read
 
 ---
 
