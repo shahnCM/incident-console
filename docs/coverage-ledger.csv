@@ -10,3 +10,6 @@ react,Reference: rules,A,2,2026-07-27,,n,Purity subpage has 5 clauses but overvi
 react,Reference: react,A,1,2026-07-27,,n,RSC has no top-level heading here but is top-level in llms.txt
 react,llms.txt (index shape - supplementary),A,1,2026-07-27,,n,Does minimal mean link-only not short given 249 lines
 vite,llms.txt (index shape),A,1,2026-07-27,,n,TOC links are root-relative unlike react's absolute links
+react,Describing the UI,A,9,2026-07-28,,y,
+react,Render and Commit,A,1,2026-07-28,,y,
+react,State as a Snapshot,A,1,2026-07-28,,y,

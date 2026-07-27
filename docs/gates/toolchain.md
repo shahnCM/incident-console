@@ -1,4 +1,4 @@
-# Gate — G5: Toolchain (Vite / TypeScript / ESLint)
+# Gate — (GQ:5, Day 1): Toolchain (Vite / TypeScript / ESLint)
 
 _Goes at `docs/gates/toolchain.md`_
 
