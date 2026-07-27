@@ -1,0 +1,27 @@
+tool,doc_section
+react,Learn: Describing the UI
+react,Learn: Adding Interactivity
+react,Learn: Managing State
+react,Learn: Escape Hatches
+react,Reference: react
+react,Reference: react-dom
+react,Reference: rules
+react,Reference: RSC/Server APIs
+typescript,Handbook
+typescript,Handbook v2
+typescript,Reference: Utility Types
+typescript,Reference: Modules
+typescript,Reference: JSX
+typescript,Reference: Decorators
+typescript,Release Notes
+vite,Guide
+vite,Features
+vite,CLI
+vite,Config Reference
+vite,Plugins/API
+react-router,Start
+react-router,Routing
+react-router,Data/Actions
+react-router,Middleware
+react-router,Framework/Vite
+react-router,API

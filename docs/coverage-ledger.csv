@@ -6,3 +6,8 @@ react,Installation,A,1,2026-07-26,,n,What the scratch path gives up vs a recomme
 react,Build a React App from Scratch,A,1,2026-07-26,,n,Is the Day 27 RSC swap meant to demonstrate this exact gap
 typescript,The Basics,A,1,2026-07-26,,n,Confirm noUncheckedIndexedAccess etc are individually documented in TSConfig reference
 typescript,Everyday Types,A,1,2026-07-26,,n,Is erasableSyntaxOnly the actual reason the plan avoids enums
+react,Rules of React (Overview),A,1,2026-07-27,,n,Purity subpage has 5 clauses but overview bullet only names idempotency
+react,Rules of React - Components and Hooks must be pure,A,1,2026-07-27,,n,Does any lint rule actually catch mutation of a module-scope array
+react,Reference Overview (landing page),A,1,2026-07-27,,n,RSC has no top-level heading here but is top-level in llms.txt
+react,llms.txt (index shape),A,1,2026-07-27,,n,Does minimal mean link-only not short given 249 lines
+vite,llms.txt (index shape),A,1,2026-07-27,,n,TOC links are root-relative unlike react's absolute links
