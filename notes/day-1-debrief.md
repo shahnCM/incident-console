@@ -2,23 +2,6 @@
 
 ### Interview prep + lessons, built from today's actual work
 
-One honesty note before this: I don't have your Tier-A reading (Vite Getting Started, React
-Installation, TS Handbook) — you haven't shared what you found there, and I'm not going to invent
-notes and pass them off as yours. Once you've got even a rough first pass in `notes/`, paste it
-here and I'll fold a proper "readings" section into this doc, for real.
-
-What I _do_ have full, accurate visibility into is everything we actually did and debugged today —
-so that's what this note is built from: the toolchain decisions (framed as interview Q&A, since
-that's the format you asked for) and the husky/git saga (which, told right, is genuinely good
-interview material).
-
-One flag on Part 1, stated once: the plan's Gate (§6 in the companion doc) wants you to write
-these five answers **cold**, then compare. What's below are model answers — useful to check your
-own against, not a substitute for writing your own first. If you already did that, ignore this
-paragraph and use these as your pressure-test.
-
----
-
 ## Part 1 — Toolchain Q&A (model answers)
 
 **Q1. What does Rolldown actually replace, and why does that collapse two bundlers into one?**
